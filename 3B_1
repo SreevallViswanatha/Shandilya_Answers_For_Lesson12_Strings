@@ -1,0 +1,19 @@
+// Write a program in C to count total number of vowel or consonant in a string.
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char string[1000];
+    int vowel=0, consonant=0, i;
+    puts("Enter a string:");
+    gets(string);
+    for(i=0; string[i]!='\0'; i++)
+    {
+        if((((string[i]>=65)&&(string[i]<=90))||((string[i]>=97)&&(string[i]<=122)))&&((string[i]=='A')||(string[i]=='a')||(string[i]=='E')||(string[i]=='e')||(string[i]=='I')||(string[i]=='i')||(string[i]=='O')||(string[i]=='o')||(string[i]=='U')||(string[i]=='u')))
+            vowel++;
+        else if(((string[i]>=65)&&(string[i]<=90))||((string[i]>=97)&&(string[i]<=122)))
+            consonant++;
+    }
+    printf("The number of vowels are:%d\n", vowel);
+    printf("The number of consonants are:%d\n", consonant);
+}
