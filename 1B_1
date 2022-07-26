@@ -1,0 +1,27 @@
+// WAP that receives a Credit Card number and checks using the above rule whether the Credit Card number is valid.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    char creditcard[16];
+    int i, length, creditcard1[8], creditcard2[8], sum1=0, sum2=0;
+    puts("Enter a credit card number:");
+    gets(creditcard);
+    length=strlen(creditcard)-1;
+    for(i=0; i<=length; i=i+2)
+    {
+        creditcard1[i]=(creditcard[i]-48)*2;
+        if(creditcard1[i]>=10)
+        {
+            creditcard1[i]-=9;
+        }
+        sum1+=creditcard1[i];
+        creditcard2[i+1]=creditcard[i+1]-48;
+        sum2+=creditcard2[i+1];
+    }
+    if((sum1+sum2)%10==0)
+        printf("Valid credit card number.");
+    else
+        printf("Invalid credit card number.");
+}
