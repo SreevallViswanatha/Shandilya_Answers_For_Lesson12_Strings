@@ -1,0 +1,21 @@
+// Write a C programming to find the repeated character in a given string.
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char string[10000];
+    int i, j;
+    puts("Enter a string:");
+    gets(string);
+    for(i=0; string[i]!='\0'; i++)
+    {
+        for(j=i+1; string[j]!='\0'; j++)
+        {
+            if(string[i]==string[j])
+            {
+                printf("The first repetitive character is:%c.", string[j]);
+                exit(0);
+            }
+        }
+    }
+}
