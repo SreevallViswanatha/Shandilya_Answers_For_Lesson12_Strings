@@ -1,0 +1,18 @@
+// Write a program that converts a string such as “124” into an integer like 124.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    char string[1000];
+    int i, number=0, length, n;
+    puts("Enter a string:");
+    gets(string);
+    length=strlen(string)-1;
+    for(i=0; i<=length; i++)
+    {
+        n=string[i]-48;
+        number=number*10+n;
+    }
+    printf("%d", number);
+}
