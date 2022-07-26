@@ -1,0 +1,16 @@
+// Write a program in C to convert a string to uppercase.
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char string[10000];
+    int i;
+    puts("Enter a string in lowercase:");
+    gets(string);
+    for(i=0; string[i]!='\0'; i++)
+    {
+        if((string[i]>=97)&&(string[i]<=122))
+            string[i]-=32;
+    }
+    puts(string);
+}
