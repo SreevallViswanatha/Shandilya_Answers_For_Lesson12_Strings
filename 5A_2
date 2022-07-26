@@ -1,0 +1,16 @@
+// Write a program in C to find the number of times a given word 'the' appears in the given string.
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char string[1000];
+    int the=0, i;
+    puts("Enter a string:");
+    gets(string);
+    for(i=0; string[i]!='\0'; i++)
+    {
+        if(((string[i]=='t')||(string[i]=='T'))&&(string[i+1]=='h')&&(string[i+2]=='e'))
+            the++;
+    }
+    printf("The number of times the word 'the' appears is:%d", the);
+}
