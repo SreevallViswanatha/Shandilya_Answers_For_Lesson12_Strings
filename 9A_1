@@ -1,0 +1,25 @@
+// Write a program in C to split string by space into words.
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+int main()
+{
+    char string[1000];
+    int i, j=0, k, length;
+    puts("Enter a string:");
+    gets(string);
+    length=strlen(string);
+    for(i=0; i<=length; i++)
+    {
+        if((string[i]==' ')||(string[i]=='\0'))
+        {
+            k=i-1;
+            for(; j<=k; j++)
+                printf("%c", string[j]);
+            printf("\n");
+            j++;
+        }
+        if(string[i]=='\0')
+            exit(0);
+    }
+}
