@@ -1,0 +1,10 @@
+// Write a program in C to input a string and print it.
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char string[1000];
+    puts("Enter a string:");
+    gets(string);
+    puts(string);
+}
