@@ -1,0 +1,22 @@
+// Write a program in C to read a sentence and replace lowercase characters by uppercase and vice-versa.
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char string[10000];
+    int i;
+    puts("Enter a string:");
+    gets(string);
+    for(i=0; string[i]!='\0'; i++)
+    {
+        if((string[i]>=65)&&(string[i]<=90))
+        {
+            string[i]+=32;
+        }
+        else if((string[i]>=97)&&(string[i]<=122))
+        {
+            string[i]-=32;
+        }
+    }
+    puts(string);
+}
