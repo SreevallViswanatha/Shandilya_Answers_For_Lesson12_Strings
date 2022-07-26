@@ -1,0 +1,17 @@
+// Write a program in C to check whether a letter is uppercase or not.
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    char c;
+    printf("Enter a letter:");
+    scanf("%c", &c);
+    if((c>=65)&&(c<=90))
+    {
+        printf("The letter is uppercase.");
+    }
+    else
+    {
+        printf("The character is not lowercase.");
+    }
+}
